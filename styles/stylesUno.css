@@ -1,40 +1,3 @@
-/* $colores: (
-    darkI:  #98979F,
-    darkII: #A29FA8,
-    lightI: #D6DBE1,
-    lightII: #EBE9EA,
-    intermedio: #a3c0de,
-    textColor: #000,
-    titlesDecoration: #eb5e28,
-    colorNavBar: #ffffff,
-    colorBotones: #222222,
-    menuDesplegable: rgba(251, 244, 238, 0.5),
-    transparenciaImg:  rgba(251, 244, 238, 0.5)
-);
-
-$tamanos: (
-    fontsmall: 100,
-    fontmedium: 500,
-    fontlarge: 900
-);
-
-$fontfamily: (
-    fontTitles: 'Bodoni Moda'
-); */
-/* Para usarlos lo llamo: */
-/* background-color: map-get($colores, colorNavBar); */
-/* %flexDisCenter {
-    display: flex;
-    justify-content: center;
-} */
-/*Para llamar al extends
-@extend %flexDisCenter;*/
-/* @mixin boton ($color, $margintop){
-    color: $color;
-    margin-top: $margintop;
-} */
-/*MIXINS para usarlo*/
-/*  @include boton($color:#FBF4EE, $margintop: 20px); */
 * {
   margin: 0%;
   padding: 0%;
@@ -43,4 +6,58 @@ $fontfamily: (
 
 body {
   overflow: auto;
-}/*# sourceMappingURL=stylesUno.css.map */
+}
+
+/*-----------------------------------------------------------------*/
+/*HEADER*/
+
+
+
+
+/*-----------------------------------------------------------------*/
+/*MAIN*/
+
+
+.bienvenida {
+  margin-top: 150px;
+  text-align: center;
+}
+
+/*Calcular prestamo*/
+.calculos {
+  margin: 150px;
+  
+}
+
+.titulos {
+  text-align: center;
+}
+
+.formCalcular {
+  display: flex;
+  flex-direction: column;
+}
+.formCalcular section{
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.poner ::placeholder {
+  color: black;
+}
+
+.botonEnviar input{
+  transition: all 500ms ;
+}
+
+.botonEnviar input:hover {
+  background-color: rgb(255, 232, 168);
+}
+
+.intereses {
+  margin-top: 150px;
+}
+
+/*-----------------------------------------------------------------*/
+/*FOOTER*/

@@ -14,14 +14,85 @@
 <body>
 
 
-    <header>
-
+    <header >
+        <nav class="navbar bg-light fixed-top shadow  bg-body rounded">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">SIMULATOR</a>
+            </div>
+        </nav>
     </header>
 
 
 
     <main>
-        <h1>Simulador de prestamos y cáclulo de intereses2</h1>
+
+        <div class="row ">
+            <div class="col bienvenida">
+                <h1>¡Bienvenido!</h1>
+                <h2>SIMULATOR</h2>
+            </div>
+        </div>
+        
+        <div class="row calculos prestamo p-5 border border-primary">
+            <div class="col">
+                <section class="titulos">
+                    <h3>Calculá préstamos</h3>
+                </section>
+                <form action="">
+                    <fieldset>
+                        <div class="formCalcular">
+                            <section class="poner">
+                                <input class="form-control shadow p-2 mb-2 bg-body rounded" type="text" placeholder="Capital" aria-label="input example">
+                            </section>
+                            <section class="ponerCuotas">
+                                <select class="form-select cuotasOptions shadow p-2 mb-3 bg-body rounded" aria-label=".form-select">
+                                    <option selected>Cuotas</option>
+                                    <option value="1">12</option>
+                                    <option value="2">6</option>
+                                    <option value="3">3</option>
+                                    <option value="4">2</option>
+                                </select>
+                            </section>
+                            <section class="botonEnviar">
+                                <input class="shadow p-2 border border-dark border-opacity-25 rounded" type="submit" value="Calcular">
+                            </section>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="row calculos intereses p-5 border border-primary">
+            <div class="col">
+                <section class="titulos">
+                    <h3>Calculá intereses</h3>
+                </section>
+                <form action="">
+                    <fieldset>
+                        <div class="formCalcular">
+                            <section class="poner">
+                                <input class="form-control shadow p-2 mb-2 bg-body rounded" type="text" placeholder="Capital" aria-label="input example">
+                            </section>
+                            <section class="poner">
+                                <input class="form-control shadow p-2 mb-2 bg-body rounded" type="text" placeholder="Interes (TNA/TEA)" aria-label="input example">
+                            </section>
+                            <section class="poner">
+                                <input class="form-control shadow p-2 mb-2 bg-body rounded" type="text" placeholder="Días a pagar" aria-label="input example">
+                            </section>
+                            <section class="poner">
+                                <input class="form-control shadow p-2 mb-2 bg-body rounded" type="text" placeholder="Unidad de tiempo" aria-label="input example">
+                            </section>
+                            <section class="botonEnviar">
+                                <input class="shadow p-2 border border-dark border-opacity-25 rounded" type="submit" value="Calcular">
+                            </section>
+                            
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
     </main>
 
 
@@ -32,10 +103,10 @@
 
  
 
+    <!-- <script src="./scripts/preEntrega1.js"></script> -->
+    <!-- <script src="./scripts/preEntrega2.js"></script> -->
 
 
- 
-    <script src="./scripts/preEntrega1.js"></script>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>

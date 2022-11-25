@@ -2,6 +2,17 @@
 
 alert("Bienvenido al simulador de préstamos");
 
+class Prestamo{
+    constructor (cuota, saldo, capital, intereses, sinIva, costoTotal){
+        this.cuota = parseFloat(cuota);
+        this.saldo = parseFloat(saldo);
+        this.capital = parseFloat(capital);
+        this.intereses = parseFloat(intereses);
+        this.sinIva = parseFloat(sinIva);
+        this.costoTotal = parseFloat(costoTotal);
+    }
+}
+
 //Función calcular intereses del prestamo
 const calcularInteres = (monto, intAnual, timePago, uniTime) => {
         //Realizo el calculo de interes
@@ -20,22 +31,47 @@ const pedirPrestamo = () => {
             alert("Debe ingresar valores positivos y mayores que 0");
 
             //Pide que se inserte el valor que desea pedir = capital
-            let capital = parseFloat(prompt("Monto solicitado.")); 
+            let saldo = parseFloat(prompt("Monto solicitado.")); 
 
             //Se pide informacion sobre el plazo estimado a pagar
             let plazo = parseFloat(prompt("Plazo en meses.\n CUOTAS: \n - 12 \n - 6 \n - 3 \n - 2")); 
 
-            //Calcula el interes
-            let intereses = Math.round((capital*65*(plazo*30))/(100*365));
+            if(saldo > 0 && plazo > 0){
+                for(let i = 1; i <= plazo; i++){
+                    //Capital mensual
+                    let capital = (saldo/plazo);
+        
+                    //Calcula el interes
+                    let intereses = Math.round((saldo*65*(plazo*30))/(100*365));
+                
+                    //Suma los intereses y la cuota a pagar por mes CUOTA SIN IVA
+                    let sinIva = Math.round((intereses)+(capital));
+        
+                    //Calculo IVA
+                    let iva = Math.round(0.21*intereses);
+        
+                    //Se calcula el costo total
+                    let costoTotal = Math.round(capital+intereses+iva);
+                    
+                    //Se guardan los datos en un array de objetos
+                    const cantidad = [];
+                    cantidad.push(new Prestamo(i, saldo, capital, intereses, sinIva, costoTotal));
+                    //Muestro los datos a partir de un for of 
+                    for(const cant of cantidad){
+                        alert(`
+                        CUOTA:${i}
+                        SALDO: $ ${cant.saldo}
+                        CAPITAL: $ ${cant.capital}
+                        INTERES: $ ${cant.intereses}
+                        CUOTA SIN IVA: $ ${cant.sinIva}
+                        IVA 21,00%: $ ${iva}
+                        COSTO TOTAL MENSUAL: $ ${cant.costoTotal}`);
 
-            //Suma los intereses y la cuota a pagar por mes
-            let res = Math.round((intereses/plazo)+(capital/plazo));
+                    }
+                }
+            }
 
-            //Calculo IVA
-            let iva = Math.round(0.21*intereses);
-
-            //Muestra los resultados
-            return alert(`El préstamo será devuelto en ${plazo} cuotas.\n\nLa cuota mensual es de $${(capital/plazo)} y el interes de $${(intereses)} \nLa cuota + los intereses por mes son: $${res}.\n Cuota + IVA (costo final de la primer cuota a pagar): $${(res+iva)}\n\n COSTO TOTAL = $${(res+iva)}\nEl costo total incluye servicios adicionales.`);
+            return menuOpciones();
 
     } else {
         //Vuelve al menu de opciones
