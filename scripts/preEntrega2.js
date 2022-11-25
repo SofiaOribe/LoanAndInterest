@@ -2,6 +2,7 @@
 
 alert("Bienvenido al simulador de préstamos");
 
+//Creo una clase para poder guardar los datos
 class Prestamo{
     constructor (cuota, saldo, capital, intereses, sinIva, costoTotal){
         this.cuota = parseFloat(cuota);
