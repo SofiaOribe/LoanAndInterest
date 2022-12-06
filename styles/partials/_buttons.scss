@@ -1,0 +1,18 @@
+.send {
+    color: map-get($colors, lightII);
+    background: map-get($colors, darkII);
+    border: none;
+    box-shadow: map-get($boxshadow, I);
+    transition: 500ms ease all;
+    &:hover {
+        background-color: map-get($colors, colorII);
+    }
+
+    body.dark & {
+        box-shadow: map-get($boxshadow, I);
+        transition: 500ms ease all;
+        &:hover {
+            background-color: map-get($colors, colorII);
+        }
+    }
+}

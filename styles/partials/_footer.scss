@@ -1,0 +1,12 @@
+footer {
+    padding-top: 10px;
+    background: map-get($colors, colorII);
+    box-shadow: map-get($boxshadow, II);
+    .footerCol {
+        @extend %flexDisCenter;
+        h6 {
+            font-weight: map-get($fontweight , fontII);
+            color: map-get($colors, lightII);
+        }
+    }
+}

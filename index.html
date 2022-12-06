@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles/stylesUno.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/724c32cb18.js" crossorigin="anonymous"></script>
       
     <title>PreEntrega1-Oribe</title>
     
@@ -15,46 +17,76 @@
 
 
     <header >
-        <nav class="navbar bg-light fixed-top shadow  bg-body rounded">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">SIMULATOR</a>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid containerOptions">
+              <!-- <a class="navbar-brand " href="./index.html"></a> -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Loan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Interest</a>
+                    </li>
+                </ul>
+                <button class="switch" id="switchId">
+                    <span><i class="fa-solid fa-sun"></i></span>
+                    <span><i class="fa-solid fa-moon"></i></span>
+                </button>
+              </div>
             </div>
-        </nav>
+          </nav>
     </header>
+
 
 
 
     <main>
 
-        <div class="row ">
-            <div class="col bienvenida">
-                <h1>¡Bienvenido!</h1>
-                <h2>SIMULATOR</h2>
+        <div class="row separation"></div>
+        
+        <div class="containerImage" widht="100%" >
+            <div class="row imageMain">
+                <h1 class="welcomeTitle">Welcome to Bank</h1>
             </div>
         </div>
+
+
+
+        <div class="row separation"></div>
+
+
+        <!-- Loan calculation -->
         
-        <div class="row calculos prestamo p-5 border border-primary rounded">
-            <div class="col">
-                <section class="titulos">
-                    <h3>Calculá préstamos</h3>
+
+        <div class="row p-5 rounded divActions">
+            <div class="col ">
+                <section class="titleActions">
+                    <h3>Loan calculation</h3>
                 </section>
                 <form action="">
                     <fieldset>
-                        <div class="formCalcular">
-                            <section class="poner">
-                                <input class="form-control shadow p-2 mb-2 bg-body rounded" type="text" placeholder="Capital" aria-label="input example">
+                        <div class="putCalculation">
+                            <section class="sectionPut">
+                                <input class="form-control shadow p-2 mb-2 rounded boxPut" type="text" placeholder="Capital" aria-label="input example">
                             </section>
-                            <section class="ponerCuotas">
-                                <select class="form-select cuotasOptions shadow p-2 mb-3 bg-body rounded" aria-label=".form-select">
-                                    <option selected>Cuotas</option>
+                            <section class="sectionPut">
+                                <select class="form-select shadow p-2 mb-2 rounded boxPut" aria-label=".form-select">
+                                    <option selected>Fee</option>
                                     <option value="1">12</option>
                                     <option value="2">6</option>
                                     <option value="3">3</option>
                                     <option value="4">2</option>
                                 </select>
                             </section>
-                            <section class="botonEnviar">
-                                <input class="shadow p-2 border border-dark border-opacity-25 rounded" type="submit" value="Calcular">
+                            <section class="sectionPut">
+                                <input class="shadow p-2 rounded send" type="submit" value="Calculate">
                             </section>
                         </div>
                     </fieldset>
@@ -63,28 +95,32 @@
         </div>
 
 
-        <div class="row calculos intereses p-5 border border-primary rounded">
+        <div class="row separation"></div>
+
+        <!-- Calculation of interest -->
+
+        <div class="row p-5 rounded divActions">
             <div class="col">
-                <section class="titulos">
+                <section class="titleActions">
                     <h3>Calculá intereses</h3>
                 </section>
                 <form action="">
                     <fieldset>
-                        <div class="formCalcular">
-                            <section class="poner">
-                                <input class="form-control shadow p-2 mb-2 bg-body rounded" type="text" placeholder="Capital" aria-label="input example">
+                        <div class="putCalculation">
+                            <section class="sectionPut">
+                                <input class="form-control shadow p-2 mb-2 rounded boxPut" type="text" placeholder="Capital" aria-label="input example">
                             </section>
-                            <section class="poner">
-                                <input class="form-control shadow p-2 mb-2 bg-body rounded" type="text" placeholder="Interes (TNA/TEA)" aria-label="input example">
+                            <section class="sectionPut">
+                                <input class="form-control shadow p-2 mb-2 rounded boxPut" type="text" placeholder="Interest" aria-label="input example">
                             </section>
-                            <section class="poner">
-                                <input class="form-control shadow p-2 mb-2 bg-body rounded" type="text" placeholder="Días a pagar" aria-label="input example">
+                            <section class="sectionPut">
+                                <input class="form-control shadow p-2 mb-2  rounded boxPut" type="text" placeholder="Time" aria-label="input example">
                             </section>
-                            <section class="poner">
-                                <input class="form-control shadow p-2 mb-2 bg-body rounded" type="text" placeholder="Unidad de tiempo" aria-label="input example">
+                            <section class="sectionPut">
+                                <input class="form-control shadow p-2 mb-2 rounded boxPut" type="text" placeholder="Unit of time" aria-label="input example">
                             </section>
-                            <section class="botonEnviar">
-                                <input class="shadow p-2 border border-dark border-opacity-25 rounded" type="submit" value="Calcular">
+                            <section class="sectionPut">
+                                <input class="shadow p-2 rounded send" type="submit" value="Calculate">
                             </section>
                             
                         </div>
@@ -96,16 +132,23 @@
     </main>
 
 
+    <div class="row separation"></div>
+
 
     <footer>
-
+        <div class="row">
+            <div class="col footerCol">
+                <h6>Create by Sofia Oribe</h6>
+            </div>
+        </div>
     </footer>
 
  
-    <script src="./scripts/preEntrega2.js"></script>
-
+    <!-- <script src="./scripts/preEntrega2.js"></script> -->
+    <script src="./scripts/mood.js"></script>
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    
 </body>
 </html> 

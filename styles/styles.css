@@ -1,0 +1,166 @@
+footer .footerCol, .containerImage .imageMain .welcomeTitle {
+  display: flex;
+  justify-content: center;
+}
+
+header nav {
+  background-color: #F9F5FF;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.607);
+  transition: 0.3s ease all;
+}
+header nav div div ul li a {
+  margin-right: 20px;
+  padding: 0%;
+}
+body.dark header nav {
+  background: #28262C;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.735);
+}
+body.dark header nav a {
+  color: #F9F5FF;
+}
+body.dark header nav a:hover {
+  color: #998FC7;
+}
+
+.containerImage .imageMain {
+  background-image: url(/image/images/dinero1.jpeg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 20rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.containerImage .imageMain .welcomeTitle {
+  position: absolute;
+  height: 20rem;
+  width: 100%;
+  color: #ffffff;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6352941176);
+}
+.containerImage .imageMain::before {
+  content: "";
+}
+
+.divActions {
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.607);
+  margin: 100px;
+  transition: 0.3ms ease all;
+  text-align: center;
+}
+body.dark .divActions {
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.735);
+}
+body.dark .divActions .boxPut {
+  background: #1f1d22;
+  border: 0.1px solid #998FC7;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.735);
+  color: #F9F5FF;
+}
+body.dark .divActions .boxPut::-moz-placeholder {
+  color: #F9F5FF;
+}
+body.dark .divActions .boxPut:-ms-input-placeholder {
+  color: #F9F5FF;
+}
+body.dark .divActions .boxPut::placeholder {
+  color: #F9F5FF;
+}
+
+.separation {
+  margin-top: 200px;
+}
+
+.titleActions {
+  color: #28262C;
+  transition: 0.3ms ease all;
+}
+body.dark .titleActions {
+  color: #ffffff;
+}
+
+.send {
+  color: #F9F5FF;
+  background: #28262C;
+  border: none;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.607);
+  transition: 500ms ease all;
+}
+.send:hover {
+  background-color: #998FC7;
+}
+body.dark .send {
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.607);
+  transition: 500ms ease all;
+}
+body.dark .send:hover {
+  background-color: #998FC7;
+}
+
+.switch {
+  background: #343D5B;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+}
+.switch::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #F9F5FF;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  transition: 0.3s ease all;
+  box-shadow: 0px 0px 2px 2px 0 0 35px rgba(0, 0, 0, 0.607);
+}
+.switch.active {
+  background: rgb(255, 89, 0);
+  color: #28262C;
+}
+.switch.active::after {
+  right: 0;
+  left: unset;
+}
+.switch span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background: none;
+  color: #F9F5FF;
+}
+
+footer {
+  padding-top: 10px;
+  background: #998FC7;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.735);
+}
+footer .footerCol h6 {
+  font-weight: 400;
+  color: #F9F5FF;
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  transition: 0.1ms;
+}
+
+body {
+  overflow: auto;
+  background: #F9F5FF;
+  transition: 0.3s ease all;
+}
+body.dark {
+  background: #1f1d22;
+}/*# sourceMappingURL=styles.css.map */

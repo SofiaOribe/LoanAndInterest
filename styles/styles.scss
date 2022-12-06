@@ -1,0 +1,25 @@
+@import "./partials/maps";
+@import "./partials/extends";
+@import "./partials/header";
+@import "./partials/main";
+@import "./partials/actions";
+@import "./partials/titles";
+@import "./partials/buttons";
+@import "./partials/mood";
+@import "./partials/footer";
+
+* {
+    margin: 0%;
+    padding: 0%;
+    transition: 0.1ms;
+} 
+
+body {
+    overflow: auto;
+    background: map-get($colors, lightII);
+    transition: .3s ease all;
+    &.dark {
+        background: map-get($colors, darkIII);
+    }
+}
+

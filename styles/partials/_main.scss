@@ -1,0 +1,25 @@
+.containerImage {
+    .imageMain {
+        background-image: url(/image/images/dinero1.jpeg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        height: 20rem;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        .welcomeTitle {
+            position: absolute;
+            height: 20rem;
+            width: 100%;
+            color: map-get($colors, lightI);
+            @extend %flexDisCenter;
+            align-items: center;
+            background-color: map-get($colors, transparentII);
+        }
+    }
+    .imageMain::before {
+        content: '';
+
+    }
+}

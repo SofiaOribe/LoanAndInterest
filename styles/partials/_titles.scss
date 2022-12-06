@@ -1,0 +1,7 @@
+.titleActions {
+    color: map-get($colors, darkII);
+    transition: .3ms ease all;
+    body.dark & {
+        color: map-get($colors, lightI);
+    }
+}

@@ -1,0 +1,31 @@
+header {
+    nav{
+        background-color: map-get($colors, lightII);
+        box-shadow:  map-get($boxshadow, I);
+        transition: .3s ease all;
+        div{
+            div {
+               
+                ul {
+                    li {
+                        a {
+                            margin-right: 20px;
+                            padding: 0%;
+                        }
+                    }
+                }
+            }
+        }
+        body.dark & {
+            background: map-get($colors, darkII);
+            box-shadow:  map-get($boxshadow, II);
+            a {
+                color: map-get($colors, lightII);
+                &:hover {
+                    color: map-get($colors, colorII);
+                }
+            }
+        }
+        
+    }
+}

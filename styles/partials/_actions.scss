@@ -1,0 +1,23 @@
+.divActions {
+    box-shadow: map-get($boxshadow, I);
+    margin: 100px;
+    transition: .3ms ease all;
+    text-align: center;
+
+    body.dark & {
+        box-shadow: map-get($boxshadow, II);
+        .boxPut {
+            background: map-get($colors, darkIII);
+            border: 0.1px solid map-get($colors, colorII);
+            box-shadow: map-get($boxshadow, II);
+            color: map-get($colors, lightII);
+            &::placeholder {
+                color: map-get($colors, lightII);
+            }
+        }
+    }
+}
+
+.separation {
+    margin-top: 200px;
+} 
