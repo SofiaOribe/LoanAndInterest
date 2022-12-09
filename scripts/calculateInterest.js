@@ -28,7 +28,7 @@ const showInterest = (showII) => {
 
     //Coloco los datos con innerhtml
     containerShowII.innerHTML = `
-    <div class="container">
+    <div class="container text-primary">
         <div class="row">Interest: $${calculateInterest.toLocaleString('es')}</div>
         <div class="p-2"></div>
         <button class="btn btn-secondary" onclick="cleanInterest()">Limpiar</button>

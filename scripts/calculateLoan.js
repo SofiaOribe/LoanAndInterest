@@ -63,7 +63,7 @@ const showLoan = (show) => {
     //Coloco los datos del prestamo con innerhtml
     containerShow.innerHTML = `
     <div class="container">
-        <div class="row">
+        <div class="row text-primary">
             <div class="row">Capital: $${show.capital.toLocaleString('es')}</div>
             <div class="row">Fees: ${show.fees}</div>
             <div class="row">Interest: $${interest.toLocaleString('es')}</div>
