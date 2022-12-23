@@ -153,11 +153,7 @@ footer .footerCol h6 {
 * {
   margin: 0%;
   padding: 0%;
-  transition: 0.1ms;
-}
-
-html {
-  scroll-behavior: smooth;
+  transition: 0.2ms;
 }
 
 body {
