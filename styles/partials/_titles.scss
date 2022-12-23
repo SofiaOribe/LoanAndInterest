@@ -1,3 +1,11 @@
+#titleDollar {
+    color: map-get($colors, darkII );
+    font-size: 30px;
+    body.dark & {
+        color: map-get($colors, lightII);
+    }
+}
+
 .titleActions {
     color: map-get($colors, darkII);
     transition: .3ms ease all;

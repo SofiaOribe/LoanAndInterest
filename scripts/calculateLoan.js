@@ -93,6 +93,8 @@ const recoverValueSaved = () => {
 
 recoverValueSaved();
 
+//Función para crear alerta cuando el usuario no ingresa los datos
+
 //Crear un préstamo ingresando los datos
 const handleSubmit = (e) => {
     e.preventDefault();
