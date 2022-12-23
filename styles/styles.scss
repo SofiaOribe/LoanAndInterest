@@ -14,6 +14,10 @@
     transition: 0.1ms;
 } 
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     overflow: auto;
     background: map-get($colors, lightII);

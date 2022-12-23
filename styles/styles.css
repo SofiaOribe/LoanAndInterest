@@ -47,7 +47,7 @@ body.dark header nav a:hover {
 
 .divActions {
   box-shadow: 0 0 35px rgba(0, 0, 0, 0.607);
-  margin: 100px;
+  margin: 150px;
   transition: 0.3ms ease all;
   text-align: center;
 }
@@ -154,6 +154,10 @@ footer .footerCol h6 {
   margin: 0%;
   padding: 0%;
   transition: 0.1ms;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
