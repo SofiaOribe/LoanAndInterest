@@ -28,7 +28,7 @@ const FEES = [
 //Clases
 class Loan {
     constructor(capital, fees) {
-        this.capital = capital;
+        this.capital = parseInt(capital);
         this.fees = fees;
     }
 };
@@ -36,11 +36,29 @@ class Loan {
 
 //Funciones
 
+//Función para crear alerta cuando el usuario no ingresa los datos
+const errorSwal = () => {
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'You must fill in all the boxes, try again.'
+    });
+}
+
+//Función para crear alerta cuando los datos ingresados son menor o igual a 0
+const errorCalculate = () => {
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'You must enter positive numbers, greater than zero. Try again.'
+    });
+}
+
+
 //Creo funcioón para mostrar cuotas
 FEES.forEach((fees) => {
     formLoan.fees.innerHTML += `<option value=${fees.valor}>${fees.text}</option>`;
 });
-
 
 //Creo una función para limpiar el prestamo
 const cleanLoan = () => {
@@ -64,12 +82,12 @@ const showLoan = (show) => {
     containerShow.innerHTML = `
     <div class="container">
         <div class="row text-primary">
-            <div class="row">Capital: $${show.capital.toLocaleString('es')}</div>
+            <div class="row">Capital: $${show.capital}</div>
             <div class="row">Fees: ${show.fees}</div>
-            <div class="row">Interest: $${interest.toLocaleString('es')}</div>
-            <div class="row">IVA: $${iva.toLocaleString('es')}</div>
+            <div class="row">Interest: $${interest.toLocaleString()}</div>
+            <div class="row">IVA: $${iva.toLocaleString()}</div>
             <div class="row">Total financial cost: ${tfc} %</div>
-            <div class="row">Amount to be returned: $${amountReturned.toLocaleString('es')}</div>
+            <div class="row">Amount to be returned: $${amountReturned.toLocaleString()}</div>
         </div>
         <div class="p-2"></div>
         <button class="btn btn-secondary" onclick="cleanLoan()">Limpiar</button>
@@ -93,15 +111,20 @@ const recoverValueSaved = () => {
 
 recoverValueSaved();
 
-//Función para crear alerta cuando el usuario no ingresa los datos
-
 //Crear un préstamo ingresando los datos
 const handleSubmit = (e) => {
     e.preventDefault();
 
     //Creo un nuevo préstamo con la clase Loan
-    //llamo a la función addValue para crear el préstamo de manera dinamica
+    //Llamo a la función addValue para crear el préstamo de manera dinamica
     const newLoan = new Loan(addValue('capital', e), addValue('fees', e));
+    if(addValue('capital', e) === "" || addValue('fees', e) === "Fee"){
+        errorSwal();
+        return;
+    } else if(addValue('capital', e) <= 0) {
+        errorCalculate();
+        return;
+    }
 
     //guardo el préstamo en el localstorage, covierno newLoan a string
     localStorage.setItem(STORAGE, JSON.stringify(newLoan));
